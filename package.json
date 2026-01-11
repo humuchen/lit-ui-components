@@ -1,0 +1,59 @@
+{
+  "name": "lit-ui-components",
+  "version": "0.0.1",
+  "description": "使用Lit构建的现代Web组件库",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.js"
+    },
+    "./themes/*": {
+      "import": "./dist/themes/*.css"
+    }
+  },
+  "files": [
+    "dist",
+    "custom-elements.json"
+  ],
+  "scripts": {
+    "dev": "vite --config vite.demo.config.ts",
+    "build": "npm run build:lib && npm run build:types",
+    "build:lib": "vite build",
+    "build:types": "tsc --project tsconfig.build.json",
+    "preview": "vite preview --config vite.demo.config.ts",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "analyze": "cem analyze --litelement",
+    "prepublishOnly": "npm run build && npm run analyze"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "component-library",
+    "custom-elements"
+  ],
+  "author": "huyang",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.9.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "prettier": "^3.1.0"
+  },
+  "customElements": "custom-elements.json"
+}
