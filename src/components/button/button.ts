@@ -1,4 +1,4 @@
-import { LitElement, html, PropertyValues } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { baseStyles } from '@/styles/shared.styles';
@@ -166,6 +166,6 @@ export class HyButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'button': HyButton;
+    'hy-button': HyButton;
   }
 }
