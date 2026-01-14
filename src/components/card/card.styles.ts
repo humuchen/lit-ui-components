@@ -7,6 +7,7 @@ export const cardStyles = css`
 
   .card {
     background-color: var(--hy-bg-color);
+    color: var(--hy-text-color);
     border-radius: var(--hy-radius-lg);
     overflow: hidden;
     transition: all var(--hy-transition-normal);

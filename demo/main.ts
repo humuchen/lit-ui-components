@@ -1,3 +1,4 @@
+import '../src/styles/theme.css';
 // 导入所有组件
 import '../src/index.ts';
 

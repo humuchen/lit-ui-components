@@ -11,7 +11,7 @@
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #f5f5f5;
+        background-color: var(--hy-bg-color);
         margin: 0;
         padding: 20px;
       }
@@ -28,7 +28,7 @@
       }
 
       .section {
-        background: white;
+        background-color: var(--hy-bg-color);
         border-radius: 12px;
         padding: 24px;
         margin-bottom: 24px;
@@ -73,102 +73,108 @@
   <body>
     <div class="container">
       <h1>🧩 Lit UI Components</h1>
+      <hy-config-provider theme="dark">
+        <!-- Button 演示 -->
+        <section class="section">
+          <h2 class="section-title">Button 按钮</h2>
 
-      <!-- Button 演示 -->
-      <section class="section">
-        <h2 class="section-title">Button 按钮</h2>
+          <span class="label">变体</span>
+          <div class="demo-row">
+            <hy-button variant="primary">Primary</hy-button>
+            <hy-button variant="secondary">Secondary</hy-button>
+            <hy-button variant="outline">Outline</hy-button>
+            <hy-button variant="ghost">Ghost</hy-button>
+            <hy-button variant="danger">Danger</hy-button>
+          </div>
 
-        <span class="label">变体</span>
-        <div class="demo-row">
-          <hy-button variant="primary">Primary</hy-button>
-          <hy-button variant="secondary">Secondary</hy-button>
-          <hy-button variant="outline">Outline</hy-button>
-          <hy-button variant="ghost">Ghost</hy-button>
-          <hy-button variant="danger">Danger</hy-button>
-        </div>
+          <span class="label">尺寸</span>
+          <div class="demo-row">
+            <hy-button size="small">Small</hy-button>
+            <hy-button size="medium">Medium</hy-button>
+            <hy-button size="large">Large</hy-button>
+          </div>
 
-        <span class="label">尺寸</span>
-        <div class="demo-row">
-          <hy-button size="small">Small</hy-button>
-          <hy-button size="medium">Medium</hy-button>
-          <hy-button size="large">Large</hy-button>
-        </div>
+          <span class="label">状态</span>
+          <div class="demo-row">
+            <hy-button disabled>Disabled</hy-button>
+            <hy-button loading>Loading</hy-button>
+            <hy-button round>Round</hy-button>
+          </div>
+        </section>
 
-        <span class="label">状态</span>
-        <div class="demo-row">
-          <hy-button disabled>Disabled</hy-button>
-          <hy-button loading>Loading</hy-button>
-          <hy-button round>Round</hy-button>
-        </div>
-      </section>
+        <!-- Input 演示 -->
+        <section class="section">
+          <h2 class="section-title">Input 输入框</h2>
 
-      <!-- Input 演示 -->
-      <section class="section">
-        <h2 class="section-title">Input 输入框</h2>
+          <div class="demo-row" style="flex-direction: column; max-width: 400px">
+            <hy-input label="用户名" placeholder="请输入用户名" clearable></hy-input>
 
-        <div class="demo-row" style="flex-direction: column; max-width: 400px">
-          <hy-input label="用户名" placeholder="请输入用户名" clearable></hy-input>
+            <hy-input
+              label="密码"
+              type="password"
+              placeholder="请输入密码"
+              show-password
+            ></hy-input>
 
-          <hy-input label="密码" type="password" placeholder="请输入密码" show-password></hy-input>
+            <hy-input
+              label="邮箱"
+              type="email"
+              placeholder="请输入邮箱"
+              help-text="我们不会分享您的邮箱"
+            ></hy-input>
 
-          <hy-input
-            label="邮箱"
-            type="email"
-            placeholder="请输入邮箱"
-            help-text="我们不会分享您的邮箱"
-          ></hy-input>
+            <hy-input
+              label="验证示例"
+              placeholder="这是一个错误状态"
+              error-message="该字段不能为空"
+              required
+            ></hy-input>
 
-          <hy-input
-            label="验证示例"
-            placeholder="这是一个错误状态"
-            error-message="该字段不能为空"
-            required
-          ></hy-input>
+            <hy-input
+              label="带字数限制"
+              placeholder="最多输入50个字符"
+              maxlength="50"
+              show-count
+              clearable
+            ></hy-input>
+          </div>
+        </section>
 
-          <hy-input
-            label="带字数限制"
-            placeholder="最多输入50个字符"
-            maxlength="50"
-            show-count
-            clearable
-          ></hy-input>
-        </div>
-      </section>
+        <!-- Card 演示 -->
+        <section class="section">
+          <h2 class="section-title">Card 卡片</h2>
 
-      <!-- Card 演示 -->
-      <section class="section">
-        <h2 class="section-title">Card 卡片</h2>
+          <div class="card-grid">
+            <hy-card card-title="基础卡片" subtitle="这是副标题">
+              <p>这是卡片的内容区域，你可以在这里放置任何内容。</p>
+            </hy-card>
 
-        <div class="card-grid">
-          <hy-card card-title="基础卡片" subtitle="这是副标题">
-            <p>这是卡片的内容区域，你可以在这里放置任何内容。</p>
-          </hy-card>
+            <hy-card card-title="可悬浮卡片" hoverable>
+              <p>鼠标悬停查看效果</p>
+            </hy-card>
 
-          <hy-card card-title="可悬浮卡片" hoverable>
-            <p>鼠标悬停查看效果</p>
-          </hy-card>
+            <hy-card card-title="可点击卡片" clickable hoverable>
+              <p>点击这张卡片</p>
+              <div slot="footer">
+                <hy-button variant="ghost" size="small">取消</hy-button>
+                <hy-button size="small">确认</hy-button>
+              </div>
+            </hy-card>
 
-          <hy-card card-title="可点击卡片" clickable hoverable>
-            <p>点击这张卡片</p>
-            <div slot="footer">
-              <hy-button variant="ghost" size="small">取消</hy-button>
-              <hy-button size="small">确认</hy-button>
-            </div>
-          </hy-card>
+            <hy-card card-title="加载中" loading>
+              <p>这张卡片正在加载...</p>
+            </hy-card>
 
-          <hy-card card-title="加载中" loading>
-            <p>这张卡片正在加载...</p>
-          </hy-card>
+            <hy-card variant="outlined" card-title="Outlined 变体">
+              <p>使用边框而非阴影</p>
+            </hy-card>
 
-          <hy-card variant="outlined" card-title="Outlined 变体">
-            <p>使用边框而非阴影</p>
-          </hy-card>
-
-          <hy-card variant="filled" card-title="Filled 变体">
-            <p>使用填充背景色</p>
-          </hy-card>
-        </div>
-      </section>
+            <hy-card variant="filled" card-title="Filled 变体">
+              <p>使用填充背景色</p>
+            </hy-card>
+          </div>
+        </section>
+      </hy-config-provider>
     </div>
 
     <script type="module" src="./main.ts"></script>

@@ -10,7 +10,7 @@ export type InputSize = 'small' | 'medium' | 'large';
 export type InputType = 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search';
 
 /**
- * @element input
+ * @element hy-input
  * @description 输入框组件
  *
  * @slot prefix - 前缀内容
