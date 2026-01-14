@@ -1,85 +1,89 @@
 :root {
-    /* 尺寸系统 */
-    --hy-spacing-xs: 4px;
-    --hy-spacing-sm: 8px;
-    --hy-spacing-md: 12px;
-    --hy-spacing-lg: 16px;
-    --hy-spacing-xl: 24px;
+  /* 尺寸系统 */
+  --hy-spacing-xs: 4px;
+  --hy-spacing-sm: 8px;
+  --hy-spacing-md: 12px;
+  --hy-spacing-lg: 16px;
+  --hy-spacing-xl: 24px;
 
-    /* 圆角 */
-    --hy-radius-sm: 4px;
-    --hy-radius-md: 6px;
-    --hy-radius-lg: 8px;
-    --hy-radius-xl: 12px;
-    --hy-radius-full: 9999px;
+  /* 圆角 */
+  --hy-radius-sm: 4px;
+  --hy-radius-md: 6px;
+  --hy-radius-lg: 8px;
+  --hy-radius-xl: 12px;
+  --hy-radius-full: 9999px;
 
-    /* 过渡 */
-    --hy-transition-fast: 150ms ease;
-    --hy-transition-normal: 200ms ease;
-    --hy-transition-slow: 300ms ease;
+  /* 过渡 */
+  --hy-transition-fast: 150ms ease;
+  --hy-transition-normal: 200ms ease;
+  --hy-transition-slow: 300ms ease;
 
-    /* 字体 */
-    --hy-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --hy-font-size-xs: 12px;
-    --hy-font-size-sm: 14px;
-    --hy-font-size-md: 16px;
-    --hy-font-size-lg: 18px;
-    --hy-font-size-xl: 20px;
+  /* 字体 */
+  --hy-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --hy-font-size-xs: 12px;
+  --hy-font-size-sm: 14px;
+  --hy-font-size-md: 16px;
+  --hy-font-size-lg: 18px;
+  --hy-font-size-xl: 20px;
 }
 
 [data-theme='light'] {
   --hy-primary-color: #6366f1;
-    --hy-primary-hover: #4f46e5;
-    --hy-primary-active: #4338ca;
-    --hy-primary-light: #e0e7ff;
+  --hy-primary-hover: #4f46e5;
+  --hy-primary-active: #4338ca;
+  --hy-primary-light: #e0e7ff;
 
-    --hy-success-color: #22c55e;
-    --hy-warning-color: #f59e0b;
-    --hy-danger-color: #ef4444;
-    --hy-info-color: #3b82f6;
+  --hy-success-color: #22c55e;
+  --hy-warning-color: #f59e0b;
+  --hy-danger-color: #ef4444;
+  --hy-info-color: #3b82f6;
 
-    --hy-text-color: #1f2937;
-    --hy-text-secondary: #6b7280;
-    --hy-text-disabled: #9ca3af;
+  --hy-text-color: #1f2937;
+  --hy-text-secondary: #6b7280;
+  --hy-text-disabled: #9ca3af;
 
-    --hy-bg-color: #ffffff;
-    --hy-bg-secondary: #f3f4f6;
-    --hy-border-color: #e5e7eb;
+  --hy-bg-color: #ffffff;
+  --hy-bg-secondary: #f3f4f6;
+  --hy-border-color: #e5e7eb;
 
-    /* 阴影 */
-    --hy-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --hy-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --hy-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-
+  /* 阴影 */
+  --hy-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --hy-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --hy-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 [data-theme='dark'] {
-    --hy-primary-color: #818cf8;
-    --hy-primary-hover: #6366f1;
-    --hy-primary-active: #4f46e5;
-    --hy-primary-light: #312e81;
+  --hy-primary-color: #818cf8;
+  --hy-primary-hover: #6366f1;
+  --hy-primary-active: #4f46e5;
+  --hy-primary-light: #312e81;
 
-    --hy-success-color: #22c55e;
-    --hy-warning-color: #f59e0b;
-    --hy-danger-color: #ef4444;
-    --hy-info-color: #60a5fa;
+  --hy-success-color: #22c55e;
+  --hy-warning-color: #f59e0b;
+  --hy-danger-color: #ef4444;
+  --hy-info-color: #60a5fa;
 
-    --hy-text-color: #f9fafb;
-    --hy-text-secondary: #9ca3af;
-    --hy-text-disabled: #6b7280;
+  --hy-text-color: #f9fafb;
+  --hy-text-secondary: #9ca3af;
+  --hy-text-disabled: #6b7280;
 
-    --hy-bg-color: #111827;
-    --hy-bg-secondary: #1f2937;
-    --hy-border-color: #374151;
+  --hy-bg-color: #111827;
+  --hy-bg-secondary: #1f2937;
+  --hy-border-color: #374151;
 
-        /* 阴影 */
-    --hy-shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
-    --hy-shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
-    --hy-shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+  /* 阴影 */
+  --hy-shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+  --hy-shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
+  --hy-shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+  transition:
+    background-color 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96),
+    color 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96),
+    border-color 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96),
+    box-shadow 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
