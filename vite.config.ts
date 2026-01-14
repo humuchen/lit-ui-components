@@ -12,11 +12,17 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [/^lit($|\/)/],
+      external: [/^lit($|\/)/, '@lit/context'],
       output: {
         preserveModules: true,
         preserveModulesRoot: 'src',
         entryFileNames: '[name].js',
+        assetFileNames: (assetInfo) => {
+          if (/\.css$/.test(assetInfo.name)) {
+            return 'styles/[name][extname]';
+          }
+          return '[name][extname]';
+        },
       },
     },
     target: 'esnext',

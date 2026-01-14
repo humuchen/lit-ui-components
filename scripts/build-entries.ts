@@ -50,7 +50,7 @@ export function scanDirectory(
       if (include && currentDepth === 0 && !include.includes(item)) return;
 
       const itemPath = resolve(dir, item);
-      
+
       if (!statSync(itemPath).isDirectory()) return;
 
       const entryFile = resolve(itemPath, entryFileName);
@@ -73,12 +73,7 @@ export function scanDirectory(
  * 构建入口配置
  */
 export function buildEntries(options: BuildEntriesOptions): Record<string, string> {
-  const {
-    srcDir,
-    componentsDir = 'components',
-    extraDirs = [],
-    ...scanOptions
-  } = options;
+  const { srcDir, componentsDir = 'components', extraDirs = [], ...scanOptions } = options;
 
   const entries: Record<string, string> = {};
 

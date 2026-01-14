@@ -1,7 +1,9 @@
-import '../src/styles/theme.css';
+//import '../src/styles/theme.css';
 // 导入所有组件
-import '../src/index.ts';
-import { useTheme } from '../src/composables/index';
+// import '../src/index.ts';
+import { useTheme } from '../dist/composables/useTheme';
+import '../dist/index';
+import '../dist/styles/style.css';
 
 const { getTheme, setTheme } = useTheme();
 
