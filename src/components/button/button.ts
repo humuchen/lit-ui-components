@@ -4,8 +4,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { baseStyles } from '@/styles/shared.styles';
 import { buttonStyles } from './button.styles';
 import { emit } from '@/utils';
-import { configContext, type ConfigState } from '@/context/config-context';
-import { consume } from '@lit/context';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
 export type ButtonSize = 'small' | 'medium' | 'large';
@@ -31,8 +29,6 @@ export type ButtonType = 'button' | 'submit' | 'reset';
  */
 @customElement('hy-button')
 export class HyButton extends LitElement {
-  @consume({ context: configContext })
-  private _config?: ConfigState;
   static override styles = [baseStyles, buttonStyles];
 
   /** 按钮变体 */
@@ -88,8 +84,6 @@ export class HyButton extends LitElement {
       'button--round': this.round,
       'button--circle': this.circle,
     };
-
-    const theme = this._config?.theme || 'light';
 
     const content = html`
       ${this.loading ? html`<span class="button__spinner"></span>` : null}

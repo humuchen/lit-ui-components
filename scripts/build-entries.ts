@@ -87,11 +87,11 @@ export function buildEntries(options: BuildEntriesOptions): Record<string, strin
   const componentsDirPath = resolve(srcDir, componentsDir);
   if (existsSync(componentsDirPath)) {
     const componentsIndex = resolve(componentsDirPath, 'index.ts');
-    if (existsSync(componentsIndex)) {
-      entries[`${componentsDir}/index`] = componentsIndex;
-    }
+    // if (existsSync(componentsIndex)) {
+    //   entries[`${componentsDir}/index`] = componentsIndex;
+    // }
 
-    const componentEntries = scanDirectory(componentsDirPath, componentsDir, {
+    const componentEntries = scanDirectory(componentsDirPath, '', {
       ...scanOptions,
       depth: 2,
     });

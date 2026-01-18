@@ -12,7 +12,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [/^lit($|\/)/, '@lit/context'],
+      // external: [/^lit($|\/)/, '@lit/context'],
       output: {
         preserveModules: true,
         preserveModulesRoot: 'src',
@@ -26,8 +26,8 @@ export default defineConfig({
       },
     },
     target: 'esnext',
-    minify: false,
-    sourcemap: true,
+    minify: true,
+    sourcemap: false,
     outDir: 'dist',
     emptyOutDir: true,
   },
